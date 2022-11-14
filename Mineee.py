@@ -2,7 +2,7 @@ import pickle
 import streamlit as st
 pickle_in=open('Predicts.pkl','rb')
 model=pickle.load(pickle_in)
-e=st.number_input('')
+ef=st.number_input('Enter heartbeat')
 if st.button('Health'):
-  rs=model.predict([[e]]).squeeze()
+  rs=model.predict([[ef]]).squeeze()
   st.success(f'Health is {rs}')
