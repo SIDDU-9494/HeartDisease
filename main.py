@@ -1,6 +1,6 @@
 import streamlit as st
 import pickle 
-pickle_in=open('HeartDisease.pkl','rb')
+pickle_in=open('Predicts.pkl','rb')
 model=pickle.load(pickle_in)
 
 age=st.number_input('enter age')
